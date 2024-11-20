@@ -2,7 +2,7 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 
 export const SkyAPI = async (req, res) => {
-  const url = "https://www.skysports.com/football-results";
+  const url = process.env.SKY_URL;
   try {
     const resp = await axios.get(url);
     const html = resp.data;
