@@ -1,7 +1,5 @@
 import "dotenv/config";
 import express from "express";
-import axios from "axios";
-import * as cheerio from "cheerio";
 import { BBCAPI } from "./BBC.js";
 import { SkyAPI } from "./SKY.js";
 
