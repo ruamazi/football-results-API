@@ -4,6 +4,7 @@ import { bbcAPI } from "./bbc.js";
 import { skyAPI } from "./sky.js";
 import { guardianAPI } from "./Guardian.js";
 import { goalAPI } from "./goal.js";
+import { beinAPI } from "./bein.js";
 
 const app = express();
 const port = process.env.PORT || 3038;
@@ -12,6 +13,7 @@ app.get("/bbc", bbcAPI);
 app.get("/sky", skyAPI);
 app.get("/guardian", guardianAPI);
 app.get("/goal", goalAPI);
+app.get("/beinar", beinAPI);
 
 app.get("/", (req, res) => {
   res.json({ status: "OK" });
