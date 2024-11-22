@@ -1,7 +1,8 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
+import { errorHandler } from "./errorHandler.js";
 
-export const SkyAPI = async (req, res) => {
+export const skyAPI = async (req, res) => {
   const url = process.env.SKY_URL;
   try {
     const resp = await axios.get(url);
@@ -34,7 +35,6 @@ export const SkyAPI = async (req, res) => {
     });
     res.json(matches);
   } catch (error) {
-    console.error("Error fetching data:", error);
-    res.status(500).json({ error: "Internal server error" });
+    errorHandler(res, 500, error);
   }
 };
