@@ -13,7 +13,7 @@ app.get("/bbc", bbcAPI);
 app.get("/sky", skyAPI);
 app.get("/guardian", guardianAPI);
 app.get("/goal", goalAPI);
-app.get("/beinar", beinAPI);
+app.get("/bein", beinAPI);
 
 app.get("/", (req, res) => {
   res.json({ status: "OK" });
